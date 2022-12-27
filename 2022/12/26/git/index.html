@@ -1,0 +1,322 @@
+<!DOCTYPE html><html lang="en" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"><title>Hexo | Hexo</title><meta name="author" content="John Doe"><meta name="copyright" content="John Doe"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="规范注意不要提交编译后文件，每次提交前clean 不用提交idea的文件.idea和.iml等 idea如果没有显示远程分支ctrl+f5刷新下 https:&#x2F;&#x2F;github.com&#x2F;k88hudson&#x2F;git-flight-rules&#x2F;blob&#x2F;master&#x2F;README_zh-CN.md#%E6%9C%AA%E6%9A%82%E5%AD%98unstaged%E7%9A%84%E5%86%85">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Hexo">
+<meta property="og:url" content="http://zy945.github.io.git/2022/12/26/git/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="规范注意不要提交编译后文件，每次提交前clean 不用提交idea的文件.idea和.iml等 idea如果没有显示远程分支ctrl+f5刷新下 https:&#x2F;&#x2F;github.com&#x2F;k88hudson&#x2F;git-flight-rules&#x2F;blob&#x2F;master&#x2F;README_zh-CN.md#%E6%9C%AA%E6%9A%82%E5%AD%98unstaged%E7%9A%84%E5%86%85">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://i.loli.net/2021/02/24/5O1day2nriDzjSu.png">
+<meta property="article:published_time" content="2022-12-26T12:07:43.181Z">
+<meta property="article:modified_time" content="2022-12-26T12:08:59.052Z">
+<meta property="article:author" content="John Doe">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://i.loli.net/2021/02/24/5O1day2nriDzjSu.png"><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="http://zy945.github.io.git/2022/12/26/git/index.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.min.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = { 
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: undefined,
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlighjs","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false},
+  copy: {
+    success: 'Copy successfully',
+    error: 'Copy error',
+    noSupport: 'The browser does not support'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  date_suffix: {
+    just: 'Just',
+    min: 'minutes ago',
+    hour: 'hours ago',
+    day: 'days ago',
+    month: 'months ago'
+  },
+  copyright: undefined,
+  lightbox: 'fancybox',
+  Snackbar: undefined,
+  source: {
+    justifiedGallery: {
+      js: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery/dist/fjGallery.min.js',
+      css: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery/dist/fjGallery.min.css'
+    }
+  },
+  isPhotoFigcaption: false,
+  islazyload: false,
+  isAnchor: false,
+  percent: {
+    toc: true,
+    rightside: false,
+  }
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: 'Hexo',
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: true,
+  postUpdate: '2022-12-26 20:08:59'
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  .justified-gallery img {
+    opacity: 1
+  }
+
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><script>(win=>{
+    win.saveToLocal = {
+      set: function setWithExpiry(key, value, ttl) {
+        if (ttl === 0) return
+        const now = new Date()
+        const expiryDay = ttl * 86400000
+        const item = {
+          value: value,
+          expiry: now.getTime() + expiryDay,
+        }
+        localStorage.setItem(key, JSON.stringify(item))
+      },
+
+      get: function getWithExpiry(key) {
+        const itemStr = localStorage.getItem(key)
+
+        if (!itemStr) {
+          return undefined
+        }
+        const item = JSON.parse(itemStr)
+        const now = new Date()
+
+        if (now.getTime() > item.expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return item.value
+      }
+    }
+  
+    win.getScript = url => new Promise((resolve, reject) => {
+      const script = document.createElement('script')
+      script.src = url
+      script.async = true
+      script.onerror = reject
+      script.onload = script.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        script.onload = script.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(script)
+    })
+  
+      win.activateDarkMode = function () {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      win.activateLightMode = function () {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+          if (t === 'dark') activateDarkMode()
+          else if (t === 'light') activateLightMode()
+        
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+    const detectApple = () => {
+      if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+    })(window)</script><meta name="generator" content="Hexo 5.4.2"><link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+</head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="https://i.loli.net/2021/02/24/5O1day2nriDzjSu.png" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="sidebar-site-data site-data is-center"><a href="/archives/"><div class="headline">Articles</div><div class="length-num">2</div></a><a href="/tags/"><div class="headline">Tags</div><div class="length-num">0</div></a><a href="/categories/"><div class="headline">Categories</div><div class="length-num">0</div></a></div><hr/></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header"><nav id="nav"><span id="blog-info"><a href="/" title="Hexo"><span class="site-name">Hexo</span></a></span><div id="menus"><div id="toggle-menu"><a class="site-page"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">No title</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">Created</span><time class="post-meta-date-created" datetime="2022-12-26T12:07:43.181Z" title="Created 2022-12-26 20:07:43">2022-12-26</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">Updated</span><time class="post-meta-date-updated" datetime="2022-12-26T12:08:59.052Z" title="Updated 2022-12-26 20:08:59">2022-12-26</time></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title=""><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">Post View:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><h1 id="规范"><a href="#规范" class="headerlink" title="规范"></a>规范</h1><p>注意不要提交编译后文件，每次提交前clean</p>
+<p>不用提交idea的文件.idea和.iml等</p>
+<p>idea如果没有显示远程分支ctrl+f5刷新下</p>
+<p><a target="_blank" rel="noopener" href="https://github.com/k88hudson/git-flight-rules/blob/master/README_zh-CN.md#%E6%9C%AA%E6%9A%82%E5%AD%98unstaged%E7%9A%84%E5%86%85%E5%AE%B9">https://github.com/k88hudson/git-flight-rules/blob/master/README_zh-CN.md#%E6%9C%AA%E6%9A%82%E5%AD%98unstaged%E7%9A%84%E5%86%85%E5%AE%B9</a></p>
+<h2 id="提交表情"><a href="#提交表情" class="headerlink" title="提交表情"></a>提交表情</h2><p><a target="_blank" rel="noopener" href="https://github.com/carloscuesta/gitmoji">https://github.com/carloscuesta/gitmoji</a></p>
+<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br></pre></td><td class="code"><pre><span class="line"><span class="section"># [<span class="string">gitmoji</span>](<span class="link">https://gitmoji.dev</span>)</span></span><br><span class="line"></span><br><span class="line"><span class="bullet">-</span> 🎨:art:改进代码的结构/格式。</span><br><span class="line"><span class="bullet">-</span> ⚡:zap:提高性能。</span><br><span class="line"><span class="bullet">-</span> 🔥:fire:删除代码或文件。</span><br><span class="line"><span class="bullet">-</span> 🐛:bug:修复一个错误。</span><br><span class="line"><span class="bullet">-</span> 🚑️:ambulance:关键修补程序。</span><br><span class="line"><span class="bullet">-</span> ✨:sparkles:引入新功能。</span><br><span class="line"><span class="bullet">-</span> 📝:memo:添加或更新文档。</span><br><span class="line"><span class="bullet">-</span> 🚀:rocket:部署东西。</span><br><span class="line"><span class="bullet">-</span> 💄:lipstick:添加或更新 UI 和样式文件。</span><br><span class="line"><span class="bullet">-</span> 🎉:tada:开始一个项目。</span><br><span class="line"><span class="bullet">-</span> ✅:white<span class="emphasis">_check_</span>mark:添加、更新或通过测试。</span><br><span class="line"><span class="bullet">-</span> 🔒️:lock:修复安全问题。</span><br><span class="line"><span class="bullet">-</span> 🔐:closed<span class="emphasis">_lock_</span>with<span class="emphasis">_key:添加或更新机密。</span></span><br><span class="line"><span class="emphasis">- 🔖:bookmark:发布/版本标签。</span></span><br><span class="line"><span class="emphasis">- 🚨:rotating_</span>light:修复编译器/linter 警告。</span><br><span class="line"><span class="bullet">-</span> 🚧:construction:工作正在进行中。</span><br><span class="line"><span class="bullet">-</span> 💚:green<span class="emphasis">_heart:修复 CI 构建。</span></span><br><span class="line"><span class="emphasis">- ⬇️:arrow_</span>down:降级依赖。</span><br><span class="line"><span class="bullet">-</span> ⬆️:arrow<span class="emphasis">_up:升级依赖项。</span></span><br><span class="line"><span class="emphasis">- 📌:pushpin:将依赖项固定到特定版本。</span></span><br><span class="line"><span class="emphasis">- 👷:construction_</span>worker:添加或更新 CI 构建系统。</span><br><span class="line"><span class="bullet">-</span> 📈:chart<span class="emphasis">_with_</span>upwards<span class="emphasis">_trend:添加或更新分析或跟踪代码。</span></span><br><span class="line"><span class="emphasis">- ♻️:recycle:重构代码。</span></span><br><span class="line"><span class="emphasis">- ➕:heavy_</span>plus<span class="emphasis">_sign:添加依赖项。</span></span><br><span class="line"><span class="emphasis">- ➖:heavy_</span>minus<span class="emphasis">_sign:删除依赖项。</span></span><br><span class="line"><span class="emphasis">- 🔧:wrench:添加或更新配置文件。</span></span><br><span class="line"><span class="emphasis">- 🔨:hammer:添加或更新开发脚本。</span></span><br><span class="line"><span class="emphasis">- 🌐:globe_</span>with<span class="emphasis">_meridians:国际化和本地化。</span></span><br><span class="line"><span class="emphasis">- ✏️:pencil2:修正错别字。</span></span><br><span class="line"><span class="emphasis">- 💩:poop:编写需要改进的糟糕代码。</span></span><br><span class="line"><span class="emphasis">- ⏪️:rewind:还原更改。</span></span><br><span class="line"><span class="emphasis">- 🔀:twisted_</span>rightwards<span class="emphasis">_arrows:合并分支。</span></span><br><span class="line"><span class="emphasis">- 📦️:package:添加或更新已编译的文件或包。</span></span><br><span class="line"><span class="emphasis">- 👽️:alien:由于外部 API 更改而更新代码。</span></span><br><span class="line"><span class="emphasis">- 🚚:truck:移动或重命名资源（例如：文件、路径、路由）。</span></span><br><span class="line"><span class="emphasis">- 📄:page_</span>facing<span class="emphasis">_up:添加或更新许可证。</span></span><br><span class="line"><span class="emphasis">- 💥:boom:引入重大更改。</span></span><br><span class="line"><span class="emphasis">- 🍱:bento:添加或更新资产。</span></span><br><span class="line"><span class="emphasis">- ♿️:wheelchair:提高可访问性。</span></span><br><span class="line"><span class="emphasis">- 💡:bulb:在源代码中添加或更新注释。</span></span><br><span class="line"><span class="emphasis">- 🍻:beers:醉醺醺地写代码。</span></span><br><span class="line"><span class="emphasis">- 💬:speech_</span>balloon:添加或更新文本和文字。</span><br><span class="line"><span class="bullet">-</span> 🗃️:card<span class="emphasis">_file_</span>box:执行与数据库相关的更改。</span><br><span class="line"><span class="bullet">-</span> 🔊:loud<span class="emphasis">_sound:添加或更新日志。</span></span><br><span class="line"><span class="emphasis">- 🔇:mute:删除日志。</span></span><br><span class="line"><span class="emphasis">- 👥:busts_</span>in<span class="emphasis">_silhouette:添加或更新贡献者。</span></span><br><span class="line"><span class="emphasis">- 🚸:children_</span>crossing:改善用户体验/可用性。</span><br><span class="line"><span class="bullet">-</span> 🏗️:building<span class="emphasis">_construction:进行架构更改。</span></span><br><span class="line"><span class="emphasis">- 📱:iphone:致力于响应式设计。</span></span><br><span class="line"><span class="emphasis">- 🤡:clown_</span>face:模拟事物。</span><br><span class="line"><span class="bullet">-</span> 🥚:egg:添加或更新复活节彩蛋。</span><br><span class="line"><span class="bullet">-</span> 🙈:see<span class="emphasis">_no_</span>evil:添加或更新 .gitignore 文件。</span><br><span class="line"><span class="bullet">-</span> 📸:camera<span class="emphasis">_flash:添加或更新快照。</span></span><br><span class="line"><span class="emphasis">- ⚗️:alembic:进行实验。</span></span><br><span class="line"><span class="emphasis">- 🔍️:mag:改善搜索引擎优化。</span></span><br><span class="line"><span class="emphasis">- 🏷️:label:添加或更新类型。</span></span><br><span class="line"><span class="emphasis">- 🌱:seedling:添加或更新种子文件。</span></span><br><span class="line"><span class="emphasis">- 🚩:triangular_</span>flag<span class="emphasis">_on_</span>post:添加、更新或删除功能标志。</span><br><span class="line"><span class="bullet">-</span> 🥅:goal<span class="emphasis">_net:捕捉错误。</span></span><br><span class="line"><span class="emphasis">- 💫:dizzy:添加或更新动画和过渡。</span></span><br><span class="line"><span class="emphasis">- 🗑️:wastebasket:弃用需要清理的代码。</span></span><br><span class="line"><span class="emphasis">- 🛂:passport_</span>control:处理与授权、角色和权限相关的代码。</span><br><span class="line"><span class="bullet">-</span> 🩹:adhesive<span class="emphasis">_bandage:对非关键问题的简单修复。</span></span><br><span class="line"><span class="emphasis">- 🧐:monocle_</span>face:数据探索/检查。</span><br><span class="line"><span class="bullet">-</span> ⚰️:coffin:删除死代码。</span><br><span class="line"><span class="bullet">-</span> 🧪:test<span class="emphasis">_tube:添加失败的测试。</span></span><br><span class="line"><span class="emphasis">- 👔:necktie:添加或更新业务逻辑</span></span><br><span class="line"><span class="emphasis">- 🩺:stethoscope:添加或更新健康检查。</span></span><br><span class="line"><span class="emphasis">- 🧱:bricks:基础设施相关的变化。</span></span><br><span class="line"><span class="emphasis">- 🧑‍💻:technologist:提升开发者体验</span></span><br><span class="line"><span class="emphasis">- 💸:money_</span>with<span class="emphasis">_wings:添加赞助或与金钱相关的基础设施。</span></span><br></pre></td></tr></table></figure>
+
+<h1 id="取消关联远程仓库"><a href="#取消关联远程仓库" class="headerlink" title="取消关联远程仓库"></a>取消关联远程仓库</h1><p>先查看关联</p>
+<p>git remote -v</p>
+<p>删除</p>
+<p>git remote rm origin</p>
+<h1 id="拉取远程仓库"><a href="#拉取远程仓库" class="headerlink" title="拉取远程仓库"></a>拉取远程仓库</h1><p>先clone</p>
+<p>git clone [url]</p>
+<p>进入项目里（远程分支存在的情况下）</p>
+<p>然后checkout -b 本地分支 远程分支</p>
+<p><img src="D:/picture/md/1666862012792-8a10b08e-3f40-4e52-b1d8-5e238bf9764d.png" alt="img"></p>
+<p>完成</p>
+<h1 id="修改提交—注释写错了"><a href="#修改提交—注释写错了" class="headerlink" title="修改提交—注释写错了"></a>修改提交—注释写错了</h1><p>会弹出vim编辑器修改即可</p>
+<p>git commit –amend</p>
+<h1 id="撤销提交和add"><a href="#撤销提交和add" class="headerlink" title="撤销提交和add"></a>撤销提交和add</h1><p><strong>git reset –hard HEAD^</strong></p>
+<h1 id="撤销提交–未推送"><a href="#撤销提交–未推送" class="headerlink" title="撤销提交–未推送"></a>撤销提交–未推送</h1><p>如果是第一次提交，好像没法撤销</p>
+<p>撤销上一次的HEAD~1也可以，会撤销最近的提交</p>
+<p><strong>git reset –soft HEAD^</strong></p>
+<h1 id="连接到空仓库并上传代码"><a href="#连接到空仓库并上传代码" class="headerlink" title="连接到空仓库并上传代码"></a>连接到空仓库并上传代码</h1><p><strong>初始化–添加到暂存区–连接仓库–提交</strong></p>
+<p>初始化本地仓库–生成.git</p>
+<p>git init</p>
+<p>添加被管理文件（.代表目录下所有）</p>
+<p>git add .</p>
+<p>提交文件</p>
+<p>git commit -m ‘第一次上传’</p>
+<p>链接远程仓库（创建完远程仓库直接复制仓库地址）</p>
+<p>git remote add origin 仓库地址</p>
+<p>推送</p>
+<p>git push -u origin master</p>
+<p>完成</p>
+<h1 id="创建本地分支并拉取远程分支"><a href="#创建本地分支并拉取远程分支" class="headerlink" title="创建本地分支并拉取远程分支"></a>创建本地分支并拉取远程分支</h1><p>git checkout -b 新的分支名 远程仓库别名/远程仓库分支名</p>
+<h1 id="删除本地分支dev"><a href="#删除本地分支dev" class="headerlink" title="删除本地分支dev"></a>删除本地分支dev</h1><p>先切换</p>
+<p>git checkout 其他的分支</p>
+<p>删除</p>
+<p>git branch -d 要删除的分支名</p>
+<p>如果有未提交的，会提示。如果确认删除</p>
+<p>git branch -D 要删除的分支名</p>
+<h1 id="本地分支关联远程分支"><a href="#本地分支关联远程分支" class="headerlink" title="本地分支关联远程分支"></a>本地分支关联远程分支</h1><p>查看关联情况</p>
+<p>git branch -vv</p>
+<p>先切换到本地分支，然后关联</p>
+<p> git branch –set-upstream-to=origin/远程分支</p>
+<h1 id="查看远程分支"><a href="#查看远程分支" class="headerlink" title="查看远程分支"></a>查看远程分支</h1><p>git remote -v</p>
+<p>加-v可以查看详细的信息，包括仓库地址</p>
+<h1 id="创建远程分支"><a href="#创建远程分支" class="headerlink" title="创建远程分支"></a>创建远程分支</h1><p>首先创建本地分支dev</p>
+<p>git checkout -b dev</p>
+<p>git push origin dev:dev</p>
+<h1 id="删除远程分支"><a href="#删除远程分支" class="headerlink" title="删除远程分支"></a>删除远程分支</h1><p>推送空分支到远程分支即可删除</p>
+<p>git push origin :dev</p>
+<h1 id="合并"><a href="#合并" class="headerlink" title="合并"></a>合并</h1><p>git merge 会让2个分支的提交按照提交时间进行排序，并且会把最新的2个commit合并成一个commit。最后的分支树呈现非线性的结构</p>
+<p>git reabse 将dev的当前提交复制到master的最新提交之后，会形成一个线性的分支树</p>
+<h1 id="工作现场"><a href="#工作现场" class="headerlink" title="工作现场"></a>工作现场</h1><p>完成一半时需要去写另一个分支，保存为工作现场后就不会出现在提交里</p>
+<h3 id="保存工作现场"><a href="#保存工作现场" class="headerlink" title="保存工作现场"></a>保存工作现场</h3><p>git stash</p>
+<h3 id="查看工作现场"><a href="#查看工作现场" class="headerlink" title="查看工作现场"></a>查看工作现场</h3><p>git stash list</p>
+<h3 id="恢复工作现场"><a href="#恢复工作现场" class="headerlink" title="恢复工作现场"></a>恢复工作现场</h3><p>git stash apply</p>
+<p>恢复后工作现场还在，应该及时删除</p>
+<h3 id="删除工作现场"><a href="#删除工作现场" class="headerlink" title="删除工作现场"></a>删除工作现场</h3><p>git stash drop</p>
+<h3 id="恢复并删除工作现场"><a href="#恢复并删除工作现场" class="headerlink" title="恢复并删除工作现场"></a>恢复并删除工作现场</h3><p>git stash pop</p>
+<h1 id="混乱区"><a href="#混乱区" class="headerlink" title="混乱区"></a>混乱区</h1><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">git submodule update --更新子模块</span><br><span class="line">本地init</span><br><span class="line">然后 remote add链接</span><br><span class="line">创建本地分支</span><br><span class="line">add .</span><br><span class="line">commit -m</span><br><span class="line">git push origin 新分支</span><br></pre></td></tr></table></figure>
+
+<p><a target="_blank" rel="noopener" href="https://blog.csdn.net/csj731742019/article/details/82773581">创建本地分支和远程分支</a></p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">git branch -r 命令查看远端库的分支情况</span><br><span class="line">git checkout -b dev 创建本地分支得dev</span><br><span class="line">git push --set-upstream origin dev  <span class="comment">//dev为创建分支的名字</span></span><br><span class="line">    </span><br></pre></td></tr></table></figure>
+
+<h1 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h1><p><a target="_blank" rel="noopener" href="https://qa.1r1g.com/sf/ask/3421016861/">https://qa.1r1g.com/sf/ask/3421016861/</a></p>
+<p>常用</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">clone分支--dev5</span><br><span class="line">git clone 不要用ctrl+v</span><br><span class="line">git clone -b  dev5   https:<span class="comment">//git.coding.net/aiyongbao/tradepc.git</span></span><br><span class="line">clone所有分支</span><br><span class="line">git clone  https:<span class="comment">//git.coding.net/aiyongbao/tradepc.git</span></span><br><span class="line"></span><br><span class="line">查看本地分支与远程关联：git branch -vv</span><br><span class="line">查看本地分支: git branch</span><br><span class="line">查看所有分支: git branch -a</span><br><span class="line">查看远程分支：git branch –r </span><br><span class="line">切换到本地xxx分支: git checkout xxx</span><br><span class="line">查看状态: git status</span><br><span class="line">创建并切换到远程xxx分支: git checkout -t origin/xxx</span><br><span class="line">查看commit日志: git log</span><br></pre></td></tr></table></figure>
+
+<p>分支确认后修改时</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line">添加所有文件到暂存区，等待提交</span><br><span class="line">git add .</span><br><span class="line"></span><br><span class="line">提交</span><br><span class="line">git commit -m<span class="string">&quot;创建分支&quot;</span></span><br><span class="line"></span><br><span class="line">推送到远程分支，自动创建</span><br><span class="line">git push origin test</span><br><span class="line">创建.git</span><br><span class="line">git init</span><br><span class="line"></span><br><span class="line">创建并选择本地分支</span><br><span class="line">git checkout -b develop</span><br><span class="line"></span><br><span class="line">查看分支</span><br><span class="line">git branch</span><br><span class="line"></span><br><span class="line">添加所有文件到暂存区，等待提交</span><br><span class="line">git add .</span><br><span class="line"></span><br><span class="line">将暂存区的文件提交到本地仓库</span><br><span class="line">git commit -m<span class="string">&quot;创建分支&quot;</span></span><br><span class="line"></span><br><span class="line">推送到本地分支到远程分支</span><br><span class="line">$ git push origin develop:develop</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">删除分支</span><br><span class="line">git branch -d develop</span><br></pre></td></tr></table></figure>
+
+<h1 id="错误总结"><a href="#错误总结" class="headerlink" title="错误总结"></a>错误总结</h1><h2 id="fatal-‘origin’-does-not-appear-to-be-a-git-repository…"><a href="#fatal-‘origin’-does-not-appear-to-be-a-git-repository…" class="headerlink" title="fatal: ‘origin’ does not appear to be a git repository…"></a>fatal: ‘origin’ does not appear to be a git repository…</h2><p>出现报错信息“fatal: ‘origin’ does not appear to be a git repository…”，</p>
+<p>大概率是origin写错了<br><img src="D:/picture/md/1664592166237-a82c77e3-48e4-4e2f-9825-79cacd051670.png" alt="img"></p>
+<h2 id="fatal-protocol-‘https’-is-not-supported"><a href="#fatal-protocol-‘https’-is-not-supported" class="headerlink" title="fatal: protocol ‘https’ is not supported"></a>fatal: protocol ‘https’ is not supported</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">原因：使用ctrl+v后发现不显示，采取右键粘贴，</span><br><span class="line">（Linux系统中ctrl+v操作会给系统中输入特殊字符^?，在git-bash不显示）</span><br></pre></td></tr></table></figure>
+
+
+
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">解决方法：重新执行克隆</span><br></pre></td></tr></table></figure>
+
+
+
+<h2 id="error-remote-origin-already-exists"><a href="#error-remote-origin-already-exists" class="headerlink" title="error: remote origin already exists."></a>error: remote origin already exists.</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">解决方法：</span><br><span class="line">git remote rm origin</span><br><span class="line">然后重新git添加仓库</span><br><span class="line">git remote add origin git@github.com:FBing/java-code-generator</span><br></pre></td></tr></table></figure>
+
+<h1 id="curl"><a href="#curl" class="headerlink" title="curl"></a>curl</h1><ul>
+<li>-s          &lt;——-&gt;去掉参数</li>
+<li>-o 1.txt&lt;——-&gt;下载页面到1.txt</li>
+<li>-H “a:b”&lt;——-&gt;添加请求头，可以修改json格式和表单格式</li>
+<li>-D “age=22”&lt;——-&gt;请求体内容</li>
+<li>-X POST&lt;——-&gt;修改请求方法默认GET</li>
+<li></li>
+</ul>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">curl http://www.baidu.com -s -o 2.txt</span><br><span class="line"><span class="meta prompt_">#</span><span class="language-bash">不会看这个</span></span><br><span class="line">curl -h</span><br></pre></td></tr></table></figure>
+
+<h1 id="上传到仓库"><a href="#上传到仓库" class="headerlink" title="上传到仓库"></a>上传到仓库</h1><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git init</span><br></pre></td></tr></table></figure>
+
+
+
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git remote add origin+复制出来的仓库的HTTPS链接</span><br></pre></td></tr></table></figure>
+
+
+
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git pull origin master</span><br></pre></td></tr></table></figure>
+
+
+
+<p>将文件保存到缓存区</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">1.      git add .(所有文件)</span><br><span class="line">2.      git add + 文件名</span><br></pre></td></tr></table></figure>
+
+
+
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git commit -m ‘文件描述’</span><br></pre></td></tr></table></figure>
+
+
+
+<p>将本地仓库推送到远程仓库</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git push origin master</span><br></pre></td></tr></table></figure>
+
+
+
+<h1 id="合并-1"><a href="#合并-1" class="headerlink" title="合并"></a>合并</h1><p>需要合并的分支：yang</p>
+<p>合并到的分支：master</p>
+<p>先推送本地到远程</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">git add</span><br><span class="line">git commit -m<span class="string">&quot;&quot;</span></span><br><span class="line">git push</span><br></pre></td></tr></table></figure>
+
+<p>切换到需要合并的分支</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git checkout master</span><br></pre></td></tr></table></figure>
+
+<p>合并</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git merge yang</span><br></pre></td></tr></table></figure>
+
+
+
+<h1 id="idea-git"><a href="#idea-git" class="headerlink" title="idea-git"></a>idea-git</h1><h2 id="操作"><a href="#操作" class="headerlink" title="操作"></a>操作</h2><h3 id="分支提交"><a href="#分支提交" class="headerlink" title="分支提交"></a>分支提交</h3><p>先提交后推送对号是提交，右边的是推送</p>
+<p><img src="D:/picture/md/1662471469997-8b2ac19b-b7d7-4cd0-b8aa-6f90a1f8a62a.png" alt="img"></p>
+<p>提交出现这个，回滚该文件</p>
+<p><img src="D:/picture/md/1670757803712-47eed5a3-6f74-48df-b4aa-32526617d1c5.png" alt="img"></p>
+<p><img src="D:/picture/md/1662471458103-b4c02606-1de2-4be6-93d3-5d25a4b4fc03.png" alt="img"></p>
+<h3 id="撤销提交"><a href="#撤销提交" class="headerlink" title="撤销提交"></a>撤销提交</h3><p><img src="D:/picture/md/1668764347227-cda06ac9-6dcd-4143-8e76-3611668513d0.png" alt="img"></p>
+<p><img src="D:/picture/md/1668764365126-1733bdc8-638e-480a-976d-2e7a25e29714.png" alt="img"></p>
+<p>结果就是第一次提交的内容会留在本地，但是提交没了，此时，恢复的后的状态新增的文件是绿色，修改的文件是蓝色</p>
+<p>Soft</p>
+<p>Files won’t change,differences will be staged for commit.</p>
+<p>文件不会更改，不同之处将被暂存，等待commit.（此时，恢复的后的状态新增的文件是绿色，修改的文件是蓝色）</p>
+<p>Mixed</p>
+<p>Files won’t change,differences won’t be staged. （won’t 是 will not的缩写）</p>
+<p>文件不会更改，不同之处将不会被暂存。（此时，恢复的后的状态新增的文件是红色，修改的文件是蓝色）</p>
+<p>Hard</p>
+<p>Files will be reverted to the state of the selected commit.</p>
+<p>Warning:any local changes will be lost.</p>
+<p>文件将被恢复到所选择提交的那个版本的状态.（此时，你所修改的或者是新增的文件都会丢失，所有的文件都是白色）</p>
+<p>Keep</p>
+<p>Files will be reverted to the state of the selected commit.</p>
+<p>but local changes will be kept intact.</p>
+<p>文件将被恢复到所选提交的状态。(目前，测试keep和hard的效果是一样的，这个有待进一步考证)</p>
+<h1 id="错误"><a href="#错误" class="headerlink" title="错误"></a>错误</h1><p>git 出现 fatal: refusing to merge unrelated histories 错误</p>
+<p>本地与远程库冲突，需要放弃本地库</p>
+<h2 id="git-log"><a href="#git-log" class="headerlink" title="git log"></a>git log</h2><p>使用git log之后无法回到主页面,最后只能暴力关闭git bash. 解决方法其实很简单,输入字母Q即可退出</p>
+<h2 id="git-pull后错误"><a href="#git-pull后错误" class="headerlink" title="git pull后错误"></a>git pull后错误</h2><h2 id="There-is-no-tracking-information-for-the-current-branch-Please-specify-which-branch-you-want-to-merge-with"><a href="#There-is-no-tracking-information-for-the-current-branch-Please-specify-which-branch-you-want-to-merge-with" class="headerlink" title="There is no tracking information for the current branch. Please specify which branch you want to merge with."></a>There is no tracking information for the current branch. Please specify which branch you want to merge with.</h2><h2 id="Already-up-to-date"><a href="#Already-up-to-date" class="headerlink" title="Already up to date"></a>Already up to date</h2><p>一、当前分支的文件和远程仓库的文件不统一，这时候就需要将远程仓库的文件同步到本地仓库后再merge</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">git pull origin 分支名 　　　　　　# 更新本地仓库数据</span><br><span class="line"></span><br><span class="line">git merge　要合并的分支名　　　　# 重新合并分支</span><br><span class="line"></span><br><span class="line">git push origin 远程分支名　　　　　　# 提交合并后的数据</span><br></pre></td></tr></table></figure>
+
+
+
+<p>二、本地仓库有新增的文件没有add和commit</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">git add .</span><br><span class="line"></span><br><span class="line">git commit -m “描述信息”</span><br><span class="line"></span><br><span class="line">git merge　要合并的分支名　　　　# 重新合并分支</span><br><span class="line"></span><br><span class="line">git push origin 远程分支名　　　　　　# 提交合并后的数据</span><br></pre></td></tr></table></figure>
+
+
+
+<h2 id="git-checkout-后生成一个本地分支-HEAD-detached-at-origin-yang"><a href="#git-checkout-后生成一个本地分支-HEAD-detached-at-origin-yang" class="headerlink" title="git checkout 后生成一个本地分支 (HEAD detached at origin/yang)"></a>git checkout 后生成一个本地分支 (HEAD detached at origin/yang)</h2><p><img src="D:/picture/md/1663029324670-1a6924c3-68eb-43fc-9320-f24f9f8d41ed.png" alt="img"></p>
+<p>表示处于游离状态，git checkout 切换分支后就恢复了</p>
+<h2 id="error-remote-origin-already-exists-1"><a href="#error-remote-origin-already-exists-1" class="headerlink" title="error: remote origin already exists."></a>error: remote origin already exists.</h2><p><img src="D:/picture/md/1666142442761-068381b6-38af-4f98-9078-5d6b364d36e8.png" alt="img"></p>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta">Author: </span><span class="post-copyright-info"><a href="http://ZY945.github.io.git">John Doe</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta">Link: </span><span class="post-copyright-info"><a href="http://zy945.github.io.git/2022/12/26/git/">http://zy945.github.io.git/2022/12/26/git/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta">Copyright Notice: </span><span class="post-copyright-info">All articles in this blog are licensed under <a target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a> unless stating additionally.</span></div></div><div class="tag_share"><div class="post-meta__tag-list"></div><div class="post_share"><div class="social-share" data-image="https://i.loli.net/2021/02/24/5O1day2nriDzjSu.png" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><div class="next-post pull-full"><a href="/2022/12/26/hello-world/" title="Hello World"><div class="cover" style="background: var(--default-bg-color)"></div><div class="pagination-info"><div class="label">Next Post</div><div class="next_info">Hello World</div></div></a></div></nav></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src="https://i.loli.net/2021/02/24/5O1day2nriDzjSu.png" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">John Doe</div><div class="author-info__description"></div></div><div class="card-info-data site-data is-center"><a href="/archives/"><div class="headline">Articles</div><div class="length-num">2</div></a><a href="/tags/"><div class="headline">Tags</div><div class="length-num">0</div></a><a href="/categories/"><div class="headline">Categories</div><div class="length-num">0</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/ZY945"><i class="fab fa-github"></i><span>Follow Me</span></a></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>Announcement</span></div><div class="announcement_content">This is my Blog</div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>Catalog</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E8%A7%84%E8%8C%83"><span class="toc-number">1.</span> <span class="toc-text">规范</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%8F%90%E4%BA%A4%E8%A1%A8%E6%83%85"><span class="toc-number">1.1.</span> <span class="toc-text">提交表情</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%8F%96%E6%B6%88%E5%85%B3%E8%81%94%E8%BF%9C%E7%A8%8B%E4%BB%93%E5%BA%93"><span class="toc-number">2.</span> <span class="toc-text">取消关联远程仓库</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%8B%89%E5%8F%96%E8%BF%9C%E7%A8%8B%E4%BB%93%E5%BA%93"><span class="toc-number">3.</span> <span class="toc-text">拉取远程仓库</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E4%BF%AE%E6%94%B9%E6%8F%90%E4%BA%A4%E2%80%94%E6%B3%A8%E9%87%8A%E5%86%99%E9%94%99%E4%BA%86"><span class="toc-number">4.</span> <span class="toc-text">修改提交—注释写错了</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%92%A4%E9%94%80%E6%8F%90%E4%BA%A4%E5%92%8Cadd"><span class="toc-number">5.</span> <span class="toc-text">撤销提交和add</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%92%A4%E9%94%80%E6%8F%90%E4%BA%A4%E2%80%93%E6%9C%AA%E6%8E%A8%E9%80%81"><span class="toc-number">6.</span> <span class="toc-text">撤销提交–未推送</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E8%BF%9E%E6%8E%A5%E5%88%B0%E7%A9%BA%E4%BB%93%E5%BA%93%E5%B9%B6%E4%B8%8A%E4%BC%A0%E4%BB%A3%E7%A0%81"><span class="toc-number">7.</span> <span class="toc-text">连接到空仓库并上传代码</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%88%9B%E5%BB%BA%E6%9C%AC%E5%9C%B0%E5%88%86%E6%94%AF%E5%B9%B6%E6%8B%89%E5%8F%96%E8%BF%9C%E7%A8%8B%E5%88%86%E6%94%AF"><span class="toc-number">8.</span> <span class="toc-text">创建本地分支并拉取远程分支</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%88%A0%E9%99%A4%E6%9C%AC%E5%9C%B0%E5%88%86%E6%94%AFdev"><span class="toc-number">9.</span> <span class="toc-text">删除本地分支dev</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%9C%AC%E5%9C%B0%E5%88%86%E6%94%AF%E5%85%B3%E8%81%94%E8%BF%9C%E7%A8%8B%E5%88%86%E6%94%AF"><span class="toc-number">10.</span> <span class="toc-text">本地分支关联远程分支</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%9F%A5%E7%9C%8B%E8%BF%9C%E7%A8%8B%E5%88%86%E6%94%AF"><span class="toc-number">11.</span> <span class="toc-text">查看远程分支</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%88%9B%E5%BB%BA%E8%BF%9C%E7%A8%8B%E5%88%86%E6%94%AF"><span class="toc-number">12.</span> <span class="toc-text">创建远程分支</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%88%A0%E9%99%A4%E8%BF%9C%E7%A8%8B%E5%88%86%E6%94%AF"><span class="toc-number">13.</span> <span class="toc-text">删除远程分支</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%90%88%E5%B9%B6"><span class="toc-number">14.</span> <span class="toc-text">合并</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%B7%A5%E4%BD%9C%E7%8E%B0%E5%9C%BA"><span class="toc-number">15.</span> <span class="toc-text">工作现场</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BF%9D%E5%AD%98%E5%B7%A5%E4%BD%9C%E7%8E%B0%E5%9C%BA"><span class="toc-number">15.0.1.</span> <span class="toc-text">保存工作现场</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%9F%A5%E7%9C%8B%E5%B7%A5%E4%BD%9C%E7%8E%B0%E5%9C%BA"><span class="toc-number">15.0.2.</span> <span class="toc-text">查看工作现场</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%81%A2%E5%A4%8D%E5%B7%A5%E4%BD%9C%E7%8E%B0%E5%9C%BA"><span class="toc-number">15.0.3.</span> <span class="toc-text">恢复工作现场</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%88%A0%E9%99%A4%E5%B7%A5%E4%BD%9C%E7%8E%B0%E5%9C%BA"><span class="toc-number">15.0.4.</span> <span class="toc-text">删除工作现场</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%81%A2%E5%A4%8D%E5%B9%B6%E5%88%A0%E9%99%A4%E5%B7%A5%E4%BD%9C%E7%8E%B0%E5%9C%BA"><span class="toc-number">15.0.5.</span> <span class="toc-text">恢复并删除工作现场</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%B7%B7%E4%B9%B1%E5%8C%BA"><span class="toc-number">16.</span> <span class="toc-text">混乱区</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%80%BB%E7%BB%93"><span class="toc-number">17.</span> <span class="toc-text">总结</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E9%94%99%E8%AF%AF%E6%80%BB%E7%BB%93"><span class="toc-number">18.</span> <span class="toc-text">错误总结</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#fatal-%E2%80%98origin%E2%80%99-does-not-appear-to-be-a-git-repository%E2%80%A6"><span class="toc-number">18.1.</span> <span class="toc-text">fatal: ‘origin’ does not appear to be a git repository…</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#fatal-protocol-%E2%80%98https%E2%80%99-is-not-supported"><span class="toc-number">18.2.</span> <span class="toc-text">fatal: protocol ‘https’ is not supported</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#error-remote-origin-already-exists"><span class="toc-number">18.3.</span> <span class="toc-text">error: remote origin already exists.</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#curl"><span class="toc-number">19.</span> <span class="toc-text">curl</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E4%B8%8A%E4%BC%A0%E5%88%B0%E4%BB%93%E5%BA%93"><span class="toc-number">20.</span> <span class="toc-text">上传到仓库</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%90%88%E5%B9%B6-1"><span class="toc-number">21.</span> <span class="toc-text">合并</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#idea-git"><span class="toc-number">22.</span> <span class="toc-text">idea-git</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%93%8D%E4%BD%9C"><span class="toc-number">22.1.</span> <span class="toc-text">操作</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%88%86%E6%94%AF%E6%8F%90%E4%BA%A4"><span class="toc-number">22.1.1.</span> <span class="toc-text">分支提交</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%92%A4%E9%94%80%E6%8F%90%E4%BA%A4"><span class="toc-number">22.1.2.</span> <span class="toc-text">撤销提交</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E9%94%99%E8%AF%AF"><span class="toc-number">23.</span> <span class="toc-text">错误</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#git-log"><span class="toc-number">23.1.</span> <span class="toc-text">git log</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#git-pull%E5%90%8E%E9%94%99%E8%AF%AF"><span class="toc-number">23.2.</span> <span class="toc-text">git pull后错误</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#There-is-no-tracking-information-for-the-current-branch-Please-specify-which-branch-you-want-to-merge-with"><span class="toc-number">23.3.</span> <span class="toc-text">There is no tracking information for the current branch. Please specify which branch you want to merge with.</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Already-up-to-date"><span class="toc-number">23.4.</span> <span class="toc-text">Already up to date</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#git-checkout-%E5%90%8E%E7%94%9F%E6%88%90%E4%B8%80%E4%B8%AA%E6%9C%AC%E5%9C%B0%E5%88%86%E6%94%AF-HEAD-detached-at-origin-yang"><span class="toc-number">23.5.</span> <span class="toc-text">git checkout 后生成一个本地分支 (HEAD detached at origin&#x2F;yang)</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#error-remote-origin-already-exists-1"><span class="toc-number">23.6.</span> <span class="toc-text">error: remote origin already exists.</span></a></li></ol></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>Recent Post</span></div><div class="aside-list"><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2022/12/26/git/" title="No title">No title</a><time datetime="2022-12-26T12:07:43.181Z" title="Created 2022-12-26 20:07:43">2022-12-26</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2022/12/26/hello-world/" title="Hello World">Hello World</a><time datetime="2022-12-26T11:30:00.308Z" title="Created 2022-12-26 19:30:00">2022-12-26</time></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2020 - 2022 By John Doe</div><div class="framework-info"><span>Framework </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>Theme </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="Read Mode"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="Switch Between Light And Dark Mode"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="Toggle between single-column and double-column"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="Setting"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="Table Of Contents"><i class="fas fa-list-ul"></i></button><button id="go-up" type="button" title="Back To Top"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.umd.min.js"></script><div class="js-pjax"></div><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>
